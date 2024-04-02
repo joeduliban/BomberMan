@@ -1,14 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Justi\\BomberMan\\",
+  "WorkspaceRootPath": "C:\\Users\\Justi\\Documents\\BomberMan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|c:\\users\\justi\\bomberman\\assets\\scripts\\gridmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|c:\\users\\justi\\documents\\bomberman\\assets\\scripts\\gridmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gridmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|C:\\Users\\Justi\\BomberMan\\assets\\scripts\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,27 +22,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Tile.cs",
-              "DocumentMoniker": "C:\\Users\\Justi\\BomberMan\\Assets\\Scripts\\Tile.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Tile.cs",
-              "ToolTip": "C:\\Users\\Justi\\BomberMan\\Assets\\Scripts\\Tile.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Tile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T22:58:26.736Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "GridManager.cs",
-              "DocumentMoniker": "C:\\Users\\Justi\\BomberMan\\Assets\\Scripts\\GridManager.cs",
+              "DocumentMoniker": "C:\\Users\\Justi\\Documents\\BomberMan\\Assets\\Scripts\\GridManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GridManager.cs",
-              "ToolTip": "C:\\Users\\Justi\\BomberMan\\Assets\\Scripts\\GridManager.cs",
+              "ToolTip": "C:\\Users\\Justi\\Documents\\BomberMan\\Assets\\Scripts\\GridManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GridManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAwAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T22:52:45.754Z",
+              "WhenOpened": "2024-04-02T17:08:00.748Z",
               "EditorCaption": ""
             }
           ]

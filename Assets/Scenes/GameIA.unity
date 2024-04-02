@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fe1dd0ceddc06840acdde1d5e9b205c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _width: 16
+  _width: 9
   _height: 9
   _tilePrefab: {fileID: 2943276087439688038, guid: 46f75eb9067b593449fa56cabb1e7611, type: 3}
   _cam: {fileID: 519420032}
