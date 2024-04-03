@@ -4,8 +4,12 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - _tilePrefab: {fileID: 2943276087439688038, guid: 46f75eb9067b593449fa56cabb1e7611, type: 3}
-  - _cam: {instanceID: 0}
+  - tilePrefab: {fileID: 2943276087439688038, guid: 46f75eb9067b593449fa56cabb1e7611, type: 3}
+  - camTransforme: {instanceID: 0}
+  - boxPrefab: {fileID: 5797687819927296072, guid: ebef4441dc04796459556089fe966fec, type: 3}
+  - wallPrefab: {fileID: 1609727898457181415, guid: 350aeb25909264245bf231a6598a85b0, type: 3}
+  - playerPrefab: {fileID: 6175860453334492951, guid: 112d07b21ffd671488bca3959587de02, type: 3}
+  - csvFile: {fileID: 4900000, guid: 4fa0974c606dd2e429422eaac6ef7ec2, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

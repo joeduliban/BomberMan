@@ -119,6 +119,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &180232204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 180232206}
+  - component: {fileID: 180232205}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &180232205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180232204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06de1297e8582d418c9750eec7aaa6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &180232206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180232204}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0832751, y: 0.07715207, z: -0.005516994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +199,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -240,10 +284,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fe1dd0ceddc06840acdde1d5e9b205c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _width: 9
-  _height: 9
-  _tilePrefab: {fileID: 2943276087439688038, guid: 46f75eb9067b593449fa56cabb1e7611, type: 3}
-  _cam: {fileID: 519420032}
+  cptMaxBox: 20
+  camTransforme: {fileID: 519420032}
+  tilePrefab: {fileID: 2943276087439688038, guid: 46f75eb9067b593449fa56cabb1e7611, type: 3}
+  boxPrefab: {fileID: 5797687819927296072, guid: ebef4441dc04796459556089fe966fec, type: 3}
+  wallPrefab: {fileID: 1609727898457181415, guid: 350aeb25909264245bf231a6598a85b0, type: 3}
+  playerPrefab: {fileID: 6175860453334492951, guid: 112d07b21ffd671488bca3959587de02, type: 3}
+  csvFile: {fileID: 4900000, guid: 4fa0974c606dd2e429422eaac6ef7ec2, type: 3}
 --- !u!4 &1587199065
 Transform:
   m_ObjectHideFlags: 0
@@ -265,3 +312,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1587199065}
+  - {fileID: 180232206}
