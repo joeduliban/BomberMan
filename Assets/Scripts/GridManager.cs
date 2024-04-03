@@ -5,19 +5,14 @@ using UnityEngine;
 public class GridManager : MonoBehaviour
 {
     [SerializeField] [Range(0,20)]private int cptMaxBox;
-
     [SerializeField] private Transform camTransforme;
-
     [SerializeField] private Tile tilePrefab;
-
     [SerializeField] private Box boxPrefab;
-
     [SerializeField] private GameObject wallPrefab;
-
     [SerializeField] private Player playerPrefab;
+    [SerializeField] private GameManager gameManager;
 
     private Dictionary<Vector2, GameObject> board;
-
     private int cptBox, height, width;
 
     public TextAsset csvFile;
@@ -97,22 +92,30 @@ public class GridManager : MonoBehaviour
                 spawnedTile.name = $"Tile {x} {y}";
                 var isOffset = (x % 2 == 0 && y % 2 != 0) || (x % 2 != 0 && y % 2 == 0);
                 spawnedTile.Init(isOffset);
-                if((x != 1 || y != 1) && (x != width - 2 || y != height - 2) && cptBox < cptMaxBox)
+                switch (s)
                 {
-                    Box box;
-                    var rnd = new System.Random();
-                    switch (rnd.Next(5))
-                    {
-                        case 1:
-                            box = Instantiate(boxPrefab, spawnedTile.transform);
-                            cptBox++;
-                            break;
-                        case 2:
-                            box = Instantiate(boxPrefab, spawnedTile.transform);
-                            box.cherrie = true;
-                            cptBox++;
-                            break;
-                    }
+                    case "O":
+                        gameManager.AddPlayer(Instantiate(playerPrefab, spawnedTile.transform));
+                        break;
+                    default:
+                        if (cptBox < cptMaxBox)
+                        {
+                            Box box;
+                            var rnd = new System.Random();
+                            int r = rnd.Next(20);
+                            if (r == 5 || r == 10 || r == 15)
+                            {
+                                Instantiate(boxPrefab, spawnedTile.transform);
+                                cptBox++;
+                            }
+                            else if (r == 2)
+                            {
+                                box = Instantiate(boxPrefab, spawnedTile.transform);
+                                box.cherrie = true;
+                                cptBox++;
+                            }
+                        }
+                        break;
                 }
                 return spawnedTile.gameObject;
         }
