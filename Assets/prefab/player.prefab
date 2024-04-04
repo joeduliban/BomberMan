@@ -123,3 +123,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: -8620229989908741792}
+  bombePrefab: {fileID: 78137088452515759, guid: ce76240270b79324e946ab081d06025c, type: 3}

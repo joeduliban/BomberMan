@@ -123,8 +123,6 @@ public class GridManager : MonoBehaviour
         }
     }
 
-
-
     public GameObject GetAtPosition(Vector2 pos)
     {
         if (board.TryGetValue(pos, out var go)) return go;

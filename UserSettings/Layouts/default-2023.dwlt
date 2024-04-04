@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 623.3334
     height: 1347.3334
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Zoom: -1
   m_ScrollPosition: {x: 0, y: 0}
   m_SelectedObject: {fileID: 0}
-  m_SelectedSpriteRectGUID: 8391b4ad357c647d0800000000000000
+  m_SelectedSpriteRectGUID: 00000000000000000000000000000000
   m_LastUsedModuleTypeName: UnityEditor.U2D.Sprites.SpriteFrameModule
 --- !u!114 &13
 MonoBehaviour:
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 1080.6667
+    y: 1027
     width: 1935.6666
     height: 318.33337
   m_SerializedDataModeController:
@@ -500,7 +500,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 9e860000
     m_LastClickedID: 34462
-    m_ExpandedIDs: 000000009e86000000ca9a3b
+    m_ExpandedIDs: 0000000094860000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -529,7 +529,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009e860000
+    m_ExpandedIDs: 0000000094860000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -608,8 +608,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1936.6667
-    y: 72.66667
+    x: 1937.6666
+    y: 19
     width: 622.3334
     height: 1326.3334
   m_SerializedDataModeController:
@@ -658,7 +658,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 72.66667
+    y: 19
     width: 616.3333
     height: 987
   m_SerializedDataModeController:
@@ -723,8 +723,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 617.3334
-    y: 72.66667
+    x: 618.3333
+    y: 19
     width: 1317.3333
     height: 987
   m_SerializedDataModeController:
@@ -1325,7 +1325,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0.079651915, y: -0.6826727, z: 0.07526787, w: 0.7224735}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_Viewpoint:
     m_SceneView: {fileID: 18}
@@ -1504,7 +1504,7 @@ MonoBehaviour:
       height: 1251.4982
     m_MinimalGUI: 1
   m_defaultScale: 0.7718749
-  m_LastWindowPixelSize: {x: 1975.9999, y: 1480.5}
+  m_LastWindowPixelSize: {x: 1317.3333, y: 987}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100

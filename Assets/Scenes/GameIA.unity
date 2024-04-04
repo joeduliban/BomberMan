@@ -154,7 +154,6 @@ MonoBehaviour:
   - {r: 0.22745098, g: 0.7647059, b: 0.73333335, a: 1}
   - {r: 1, g: 0, b: 0, a: 1}
   - {r: 0.032125235, g: 1, b: 0, a: 1}
-  players: []
 --- !u!4 &180232206
 Transform:
   m_ObjectHideFlags: 0
