@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -10,16 +11,17 @@ public class GridManager : MonoBehaviour
     [SerializeField] private Box boxPrefab;
     [SerializeField] private GameObject wallPrefab;
     [SerializeField] private Player playerPrefab;
-    [SerializeField] private GameManager gameManager;
 
     private Dictionary<Vector2, GameObject> board;
     private int cptBox, height, width;
 
     public TextAsset csvFile;
 
+    public event EventHandler AddPlayer;
+
     void Start()
     {
-        GenerateGrid();
+
     }
 
     static public string[,] SplitCsvGrid(string csvText)
@@ -60,7 +62,7 @@ public class GridManager : MonoBehaviour
                 select m.Groups[1].Value).ToArray();
     }
 
-    void GenerateGrid()
+    public void GenerateGrid()
     {
         string[,] grid = SplitCsvGrid(csvFile.text);
         height = grid.GetUpperBound(1);
@@ -95,7 +97,7 @@ public class GridManager : MonoBehaviour
                 switch (s)
                 {
                     case "O":
-                        gameManager.AddPlayer(Instantiate(playerPrefab, spawnedTile.transform));
+                        AddPlayer(Instantiate(playerPrefab, spawnedTile.transform), EventArgs.Empty);
                         break;
                     default:
                         if (cptBox < cptMaxBox)
@@ -123,7 +125,7 @@ public class GridManager : MonoBehaviour
 
 
 
-    public GameObject GetTileAtPosition(Vector2 pos)
+    public GameObject GetAtPosition(Vector2 pos)
     {
         if (board.TryGetValue(pos, out var go)) return go;
         return null;

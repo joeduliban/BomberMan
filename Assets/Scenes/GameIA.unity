@@ -148,11 +148,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d06de1297e8582d418c9750eec7aaa6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 1587199064}
   playersColor:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.22745098, g: 0.7647059, b: 0.73333335, a: 1}
   - {r: 1, g: 0, b: 0, a: 1}
   - {r: 0.032125235, g: 1, b: 0, a: 1}
+  players: []
 --- !u!4 &180232206
 Transform:
   m_ObjectHideFlags: 0
@@ -295,7 +297,6 @@ MonoBehaviour:
   boxPrefab: {fileID: 5797687819927296072, guid: ebef4441dc04796459556089fe966fec, type: 3}
   wallPrefab: {fileID: 1609727898457181415, guid: 350aeb25909264245bf231a6598a85b0, type: 3}
   playerPrefab: {fileID: 6175860453334492951, guid: 112d07b21ffd671488bca3959587de02, type: 3}
-  gameManager: {fileID: 180232205}
   csvFile: {fileID: 4900000, guid: 4fa0974c606dd2e429422eaac6ef7ec2, type: 3}
 --- !u!4 &1587199065
 Transform:

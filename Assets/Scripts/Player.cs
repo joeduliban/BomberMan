@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private Animator animator;
+    public int rangeBombe {  get; set; }
+    private string[] move = { "Up", "Down", "Right", "Left" };
+
+    public void Move(Transform parent, int dir)
     {
-        
+        animator.SetTrigger(move[dir]);
+        transform.SetParent(parent);
+        transform.localPosition = new Vector3(0,0,-1);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Bomber()
     {
-        
+        Debug.Log("Bombe");
     }
 }
