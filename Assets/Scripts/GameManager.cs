@@ -68,7 +68,8 @@ public class GameManager : MonoBehaviour
     private void BomberPlayer()
     {
         Bombe bb = CurrentPlayer().Bomber();
-        bb.Explosion += exposionBombe;
+        if(bb != null)
+            bb.Explosion += exposionBombe;
     }
 
     private Player CurrentPlayer()
