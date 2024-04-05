@@ -93,19 +93,22 @@ public class GameManager : MonoBehaviour
         Vector2 pos2D = new Vector2(bombe.transform.position.x, bombe.transform.position.y);
         foreach (Vector2 direction in direct2D)
         {
-            for (int i = 1; i <= bombe.range; i++)
+            for (int i = 0; i <= bombe.range; i++)
             {
                 GameObject go = board.GetAtPosition((i * direction) + pos2D);
-                for (int j = 0; j < go.transform.childCount && !go.tag.Equals("Wall"); j++)
-                {
-                    if (!go.transform.GetChild(j).tag.Equals("Cherrie"))
+                if(!go.tag.Equals("Wall"))
+                    for (int j = 0; j < go.transform.childCount; j++)
                     {
-                        if (go.transform.GetChild(j).tag.Equals("Player"))
-                            players.Remove(go.transform.GetComponentInChildren<Player>());
-                        Destroy(go.transform.GetChild(j).gameObject);
-                    }
+                        if (!go.transform.GetChild(j).tag.Equals("Cherrie"))
+                        {
+                            if (go.transform.GetChild(j).tag.Equals("Player"))
+                                players.Remove(go.transform.GetComponentInChildren<Player>());
+                            Destroy(go.transform.GetChild(j).gameObject);
+                        }
 
-                }
+                    }
+                else
+                    break;
             }
         }
     }

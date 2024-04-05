@@ -99,7 +99,7 @@ public class GridManager : MonoBehaviour
                     case "O":
                         AddPlayer(Instantiate(playerPrefab, spawnedTile.transform), EventArgs.Empty);
                         break;
-                    default:
+                    case " ":
                         if (cptBox < cptMaxBox)
                         {
                             Box box;
