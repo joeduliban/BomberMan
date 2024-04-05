@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
-    [SerializeField] [Range(0,20)]private int cptMaxBox;
+    [SerializeField][Range(0, 20)] private int cptMaxBox;
     [SerializeField] private Transform camTransforme;
     [SerializeField] private Tile tilePrefab;
     [SerializeField] private Box boxPrefab;
@@ -13,7 +13,9 @@ public class GridManager : MonoBehaviour
     [SerializeField] private Player playerPrefab;
 
     private Dictionary<Vector2, GameObject> board;
-    private int cptBox, height, width;
+    private int cptBox;
+    public int height { get; set; }
+    public int width {get; set;}
 
     public TextAsset csvFile;
 

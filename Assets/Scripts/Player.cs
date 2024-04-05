@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     private Animator animator;
     [SerializeField]
     private Bombe bombePrefab;
+
+    public bool isIA;
     public int rangeBombe {  get; set; }
     private List<Bombe> bombes;
     private string[] move = { "Up", "Down", "Right", "Left" };
