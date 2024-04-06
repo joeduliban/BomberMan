@@ -5,21 +5,33 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    private GridManager board;
+    protected GridManager board;
     public Color[] playersColor;
-    private List<Player> players;
-    private int currentPlayer;
+    protected List<Player> players;
+    protected int currentPlayer;
+    private AIManager aiManager;
 
-    private Vector2[] direct2D = { Vector2.up, Vector2.down, Vector2.right, Vector2.left };
+    protected Vector2[] direct2D = { Vector2.up, Vector2.down, Vector2.right, Vector2.left };
 
-    void Start()
+    private void Start()
+    {
+        Init();
+    }
+
+    protected virtual void Init(GridManager grid = null)
     {
         players = new List<Player>();
         board.AddPlayer += AddPlayer;
         board.GenerateGrid();
+        aiManager = gameObject.AddComponent<AIManager>();
     }
 
-    void Update()
+    private void Update()
+    {
+        eventAction();
+    }
+
+    protected virtual void eventAction()
     {
         if (!isGameOver())
         {
@@ -46,10 +58,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void MovePlayer(int dir)
+    protected void MovePlayer(int dir)
     {
         Player player = CurrentPlayer();
-        player.NextParty();
         Vector2 pos2D = new Vector2(player.transform.position.x, player.transform.position.y);
         GameObject square = board.GetAtPosition(pos2D + direct2D[dir]);
         if(!square.tag.Equals("Wall"))
@@ -66,14 +77,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void BomberPlayer()
+    protected void BomberPlayer()
     {
         Bombe bb = CurrentPlayer().Bomber();
         if(bb != null)
             bb.Explosion += exposionBombe;
     }
 
-    private void ApplyAction(Action action)
+    protected virtual void ApplyAction(Action action)
     {
         switch (action)
         {
@@ -96,28 +107,29 @@ public class GameManager : MonoBehaviour
         ChangeCurrentPlayer();
         if (CurrentPlayer().isIA)
         {
-            ApplyAction(GetAIAction());
+            //ApplyAction(aiManager.GetAIAction());
         }
     }
 
-    private Player CurrentPlayer()
+    protected Player CurrentPlayer()
     {
         return players[currentPlayer];
     }
 
-    private void ChangeCurrentPlayer()
+    protected void ChangeCurrentPlayer()
     {
+        CurrentPlayer().NextParty();
         currentPlayer = (currentPlayer + 1) % players.Count;
     }
 
-    private void AddPlayer(object sender, EventArgs e)
+    protected void AddPlayer(object sender, EventArgs e)
     {
         Player player = (Player)sender;
         player.GetComponent<SpriteRenderer>().color = playersColor[players.Count];
         players.Add(player);
     }
 
-    private void exposionBombe(object sender, EventArgs e)
+    protected void exposionBombe(object sender, EventArgs e)
     {
         Bombe bombe = (Bombe)sender;
         Vector2 pos2D = new Vector2(bombe.transform.position.x, bombe.transform.position.y);
@@ -142,87 +154,7 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
-    private Action GetAIAction()
-    {
-        int bestScore = int.MinValue;
-        Action bestAction = Action.Up;
-
-        foreach (Action action in Enum.GetValues(typeof(Action)))
-        {
-            int score = Minimax(action, 3, false); // Profondeur de recherche 3 pour cet exemple
-            if (score > bestScore)
-            {
-                bestScore = score;
-                bestAction = action;
-            }
-        }
-
-        return bestAction;
-    }
-
-    // Implémentation récursive de l'algorithme Minimax
-    private int Minimax(Action action, int depth, bool isMaximizingPlayer)
-    {
-        if (depth == 0 || isGameOver())
-        {
-            return EvaluateBoard();
-        }
-
-        ApplyAction(action); // Appliquer l'action sur le plateau de jeu
-
-        if (isMaximizingPlayer)
-        {
-            int maxEval = int.MinValue;
-            foreach (Action nextAction in Enum.GetValues(typeof(Action)))
-            {
-                maxEval = Math.Max(maxEval, Minimax(nextAction, depth - 1, false));
-            }
-            return maxEval;
-        }
-        else
-        {
-            int minEval = int.MaxValue;
-            foreach (Action nextAction in Enum.GetValues(typeof(Action)))
-            {
-                minEval = Math.Min(minEval, Minimax(nextAction, depth - 1, true));
-            }
-            return minEval;
-        }
-    }
-
-    // Méthode pour évaluer l'état actuel du plateau de jeu
-    private int EvaluateBoard()
-    {
-        int score = 0;
-
-        // Parcours du plateau de jeu pour évaluer différentes conditions
-        for (int i = 0; i < board.width; i++)
-        {
-            for (int j = 0; j < board.height; j++)
-            {
-                GameObject go = board.GetAtPosition(new Vector2(i, j));
-                if (go.tag.Equals("Wall"))
-                    score -= 1;
-                else
-                    for (int k = 0; k < go.transform.childCount; k++)
-                    {
-                        if(go.transform.GetChild(k).tag.Equals("Cherrie"))
-                            score += 20;
-                        else if(go.transform.GetChild(k).tag.Equals("Player"))
-                            score += 10;
-                        else if (go.transform.GetChild(k).tag.Equals("Box"))
-                            score -= 1;
-                        else if (go.transform.GetChild(k).tag.Equals("Bombe"))
-                            score -= 10;
-                    }
-            }
-        }
-
-        return score;
-    }
-
-    private bool isGameOver()
+    protected bool isGameOver()
     {
         return players.Count <= 1;
     }

@@ -9,21 +9,22 @@ public class Bombe : MonoBehaviour
     public int range {  get; set; }
     public event EventHandler Explosion;
 
-    public void BigBomber()
+    public bool BigBomber()
     {
         height += 1;
         switch (height)
         {
-            case 2:
+            case 3:
                 animator.SetTrigger("Medium");
                 break;
-            case 4:
+            case 5:
                 animator.SetTrigger("Big");
                 break;
             case 6:
                 Destroy(gameObject);
-                break;
+                return true;
         }
+        return false;
     }
 
     private void OnDestroy()

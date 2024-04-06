@@ -29,16 +29,14 @@ public class Player : MonoBehaviour
 
     public void NextParty()
     {
-        try
+        int i = 0;
+        while (i<bombes.Count)
         {
-            foreach (Bombe bb in bombes)
-                try
-                {
-                    bb.BigBomber();
-                }
-                catch (Exception e) { bombes.Remove(bb); }
+            if (bombes[i].BigBomber())
+                bombes.Remove(bombes[i]);
+            else
+                i++;
         }
-        catch (Exception e) { }
     }
 
     public Bombe Bomber()
