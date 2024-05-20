@@ -29,6 +29,10 @@ public class Bombe : MonoBehaviour
 
     private void OnDestroy()
     {
-        Explosion(this,EventArgs.Empty);
+        try
+        {
+            Explosion(this, EventArgs.Empty);
+        }
+        catch { }
     }
 }

@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Justi\\Documents\\BomberMan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|C:\\Users\\Justi\\Documents\\BomberMan\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|c:\\users\\justi\\documents\\bomberman\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|C:\\Users\\Justi\\Documents\\BomberMan\\assets\\scripts\\aimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\aimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|C:\\Users\\Justi\\Documents\\BomberMan\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|C:\\Users\\Justi\\Documents\\BomberMan\\assets\\scripts\\box.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\box.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|C:\\Users\\Justi\\Documents\\BomberMan\\assets\\scripts\\action.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\action.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|C:\\Users\\Justi\\Documents\\BomberMan\\assets\\scripts\\bombe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bombe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|C:\\Users\\Justi\\Documents\\BomberMan\\assets\\scripts\\gridmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gridmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|C:\\Users\\Justi\\Documents\\BomberMan\\assets\\scripts\\box.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\box.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|C:\\Users\\Justi\\Documents\\BomberMan\\assets\\scripts\\cherrie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,18 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|C:\\Users\\Justi\\Documents\\BomberMan\\assets\\scripts\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|C:\\Users\\Justi\\Documents\\BomberMan\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|c:\\users\\justi\\documents\\bomberman\\assets\\scripts\\action.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\action.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|C:\\Users\\Justi\\Documents\\BomberMan\\assets\\scripts\\gridmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A23C9898-3F15-7173-75EB-EE14334A7A3B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gridmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,41 +42,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Action.cs",
               "DocumentMoniker": "C:\\Users\\Justi\\Documents\\BomberMan\\Assets\\Scripts\\Action.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Action.cs",
               "ToolTip": "C:\\Users\\Justi\\Documents\\BomberMan\\Assets\\Scripts\\Action.cs",
               "RelativeToolTip": "Assets\\Scripts\\Action.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-05T18:08:54.271Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AIManager.cs",
-              "DocumentMoniker": "C:\\Users\\Justi\\Documents\\BomberMan\\Assets\\Scripts\\AIManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\AIManager.cs",
-              "ToolTip": "C:\\Users\\Justi\\Documents\\BomberMan\\Assets\\Scripts\\AIManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\AIManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T16:18:23.087Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Box.cs",
               "DocumentMoniker": "C:\\Users\\Justi\\Documents\\BomberMan\\Assets\\Scripts\\Box.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Box.cs",
@@ -88,8 +67,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Box.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T15:20:37.913Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T15:20:37.913Z"
             },
             {
               "$type": "Document",
@@ -99,14 +77,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bombe.cs",
               "ToolTip": "C:\\Users\\Justi\\Documents\\BomberMan\\Assets\\Scripts\\Bombe.cs",
               "RelativeToolTip": "Assets\\Scripts\\Bombe.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-04T17:37:51.719Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Cherrie.cs",
               "DocumentMoniker": "C:\\Users\\Justi\\Documents\\BomberMan\\Assets\\Scripts\\Cherrie.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Cherrie.cs",
@@ -114,12 +92,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Cherrie.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T20:58:05.605Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-04T20:58:05.605Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Tile.cs",
               "DocumentMoniker": "C:\\Users\\Justi\\Documents\\BomberMan\\Assets\\Scripts\\Tile.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Tile.cs",
@@ -127,18 +104,17 @@
               "RelativeToolTip": "Assets\\Scripts\\Tile.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T14:42:18.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T14:42:18.689Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\Justi\\Documents\\BomberMan\\Assets\\Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player.cs",
               "ToolTip": "C:\\Users\\Justi\\Documents\\BomberMan\\Assets\\Scripts\\Player.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAMAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAiwC4AAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-03T13:28:36.793Z",
               "EditorCaption": ""
@@ -151,22 +127,23 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
               "ToolTip": "C:\\Users\\Justi\\Documents\\BomberMan\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAlAAAA",
+              "ViewState": "AQIAAFgAAAAAnJmZmZkdwHkAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-03T13:27:59.594Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "GridManager.cs",
               "DocumentMoniker": "C:\\Users\\Justi\\Documents\\BomberMan\\Assets\\Scripts\\GridManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GridManager.cs",
               "ToolTip": "C:\\Users\\Justi\\Documents\\BomberMan\\Assets\\Scripts\\GridManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GridManager.cs",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAowHMAAAAdAAAA",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAiwIQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T17:08:00.748Z"
+              "WhenOpened": "2024-04-02T17:08:00.748Z",
+              "EditorCaption": ""
             }
           ]
         }

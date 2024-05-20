@@ -12,7 +12,8 @@ public class GridManager : MonoBehaviour
     [SerializeField] private GameObject wallPrefab;
     [SerializeField] private Player playerPrefab;
 
-    private Dictionary<Vector2, GameObject> board;
+    private Dictionary<Vector2, GameObject> Board;
+    public Dictionary<Vector2, GameObject> board { get { return Board; } set { Board = value; } }
     private int cptBox;
     public int height { get; set; }
     public int width {get; set;}
@@ -124,6 +125,29 @@ public class GridManager : MonoBehaviour
                 return spawnedTile.gameObject;
         }
     }
+
+    public Dictionary<Vector2, GameObject> CloneBoard()
+    {
+        Dictionary<Vector2, GameObject> clonedBoard = new Dictionary<Vector2, GameObject>();
+        foreach (var kvp in board)
+        {
+            Vector2 position = kvp.Key;
+            GameObject original = kvp.Value;
+            GameObject clone = Instantiate(original); // Cloner l'objet original
+            clonedBoard.Add(position, clone);
+        }
+        return clonedBoard;
+    }
+
+    public void CleanupClones(Dictionary<Vector2, GameObject> clonedBoard)
+    {
+        foreach (var kvp in clonedBoard)
+        {
+            Destroy(kvp.Value); // Détruire chaque clone
+        }
+        clonedBoard.Clear(); // Vider le dictionnaire
+    }
+
 
     public GameObject GetAtPosition(Vector2 pos)
     {
