@@ -10,8 +10,8 @@ public class Player : MonoBehaviour
     private Bombe bombePrefab;
 
     public bool isIA;
-    public int rangeBombe {  get; set; }
-    private List<Bombe> bombes;
+    public int rangeBombe { get; set; }
+    public List<Bombe> bombes;
     private string[] move = { "Up", "Down", "Right", "Left" };
 
     private void Start()
@@ -24,16 +24,16 @@ public class Player : MonoBehaviour
     {
         animator.SetTrigger(move[dir]);
         transform.SetParent(parent);
-        transform.localPosition = new Vector3(0,0,-1);
+        transform.localPosition = new Vector3(0, 0, -1);
     }
 
     public void NextParty()
     {
         int i = 0;
-        while (i<bombes.Count)
+        while (i < bombes.Count)
         {
-            if (bombes[i].BigBomber())
-                bombes.Remove(bombes[i]);
+            if (bombes[i].BigBomber())//problème ici
+                bombes.RemoveAt(i);
             else
                 i++;
         }
@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
 
     private void OnDestroy()
     {
-        //Animation Dead
+        // Animation Dead
+        // Debug.Log("Dead");
     }
 }

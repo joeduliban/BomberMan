@@ -134,6 +134,14 @@ public class GridManager : MonoBehaviour
             Vector2 position = kvp.Key;
             GameObject original = kvp.Value;
             GameObject clone = Instantiate(original); // Cloner l'objet original
+            if (clone.transform.childCount > 0 && clone.transform.GetChild(0).tag.Equals("Player"))
+            {
+                Player playerClone = clone.transform.GetChild(0).gameObject.GetComponent<Player>();
+                Player playerOriginal = original.transform.GetChild(0).gameObject.GetComponent<Player>();
+                playerClone.bombes.Clear();
+                playerClone.bombes = new List<Bombe>(playerOriginal.bombes);
+                AddPlayer(playerClone, EventArgs.Empty);
+            }
             clonedBoard.Add(position, clone);
         }
         return clonedBoard;

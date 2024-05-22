@@ -21,18 +21,10 @@ public class Bombe : MonoBehaviour
                 animator.SetTrigger("Big");
                 break;
             case 6:
+                Explosion(this, EventArgs.Empty);
                 Destroy(gameObject);
                 return true;
         }
         return false;
-    }
-
-    private void OnDestroy()
-    {
-        try
-        {
-            Explosion(this, EventArgs.Empty);
-        }
-        catch { }
     }
 }
