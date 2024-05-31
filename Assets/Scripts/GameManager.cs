@@ -108,11 +108,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private Player CurrentPlayer()
+    public Player CurrentPlayer()
     {
-        if (players == null || players.Count == 0) return null;
         return players[currentPlayer];
     }
+
 
     private void ChangeCurrentPlayer()
     {
@@ -182,7 +182,7 @@ public class GameManager : MonoBehaviour
         {
             ApplyAction(action, true);
 
-            int boardValue = Minimax(action, 3, false); // Depth and isMaximizingPlayer might need adjustment
+            int boardValue = Minimax(action, 3, false, int.MinValue, int.MaxValue); // Depth, isMaximizingPlayer, alpha and beta might need adjustment
 
             if (boardValue > bestValue)
             {
@@ -194,7 +194,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Implémentation récursive de l'algorithme Minimax
-    private int Minimax(Action action, int depth, bool isMaximizingPlayer)
+    private int Minimax(Action action, int depth, bool isMaximizingPlayer, int alpha, int beta)
     {
         // Cloner le plateau et les joueurs
         List<Player> originalPlayers = players;
@@ -223,7 +223,12 @@ public class GameManager : MonoBehaviour
             foreach (Action nextAction in Enum.GetValues(typeof(Action)))
             {
                 board.board = clonedBoard; // Use the cloned board for the next action
-                maxEval = Math.Max(maxEval, Minimax(nextAction, depth - 1, false));
+                maxEval = Math.Max(maxEval, Minimax(nextAction, depth - 1, false, alpha, beta));
+                alpha = Math.Max(alpha, maxEval);
+                if (beta <= alpha)
+                {
+                    break; // Beta cut-off
+                }
             }
             evaluation = maxEval;
         }
@@ -233,7 +238,12 @@ public class GameManager : MonoBehaviour
             foreach (Action nextAction in Enum.GetValues(typeof(Action)))
             {
                 board.board = clonedBoard; // Use the cloned board for the next action
-                minEval = Math.Min(minEval, Minimax(nextAction, depth - 1, true));
+                minEval = Math.Min(minEval, Minimax(nextAction, depth - 1, true, alpha, beta));
+                beta = Math.Min(beta, minEval);
+                if (beta <= alpha)
+                {
+                    break; // Alpha cut-off
+                }
             }
             evaluation = minEval;
         }
@@ -250,13 +260,21 @@ public class GameManager : MonoBehaviour
     private int EvaluateBoard()
     {
         int score = 0;
-
         Player aiPlayer = CurrentPlayer();
+        if (aiPlayer == null)
+        {
+            Debug.LogError("AI Player is null.");
+            return score;
+        }
         Vector2 aiPosition = new Vector2(aiPlayer.transform.position.x, aiPlayer.transform.position.y);
 
         foreach (Player player in players)
         {
-            if (player == null) continue;
+            if (player == null)
+            {
+                Debug.LogWarning("Encountered a null player in the players list.");
+                continue;
+            }
 
             Vector2 playerPosition = new Vector2(player.transform.position.x, player.transform.position.y);
 
